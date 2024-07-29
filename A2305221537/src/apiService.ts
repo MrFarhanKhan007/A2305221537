@@ -1,12 +1,14 @@
 import axios from 'axios';
 
 const API_URL = 'http://localhost:9876/numbers';
-const ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzIyMjQzNzM2LCJpYXQiOjE3MjIyNDM0MzYsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImU4OTdmZjhmLTE3OGUtNGE1Ny05NDFlLTNhMDZkODBjYjFmOSIsInN1YiI6ImZhcmhhbi5raGFuM0BzLmFtaXR5LmVkdSJ9LCJjb21wYW55TmFtZSI6IkFmZm9yZE1lZCIsImNsaWVudElEIjoiZTg5N2ZmOGYtMTc4ZS00YTU3LTk0MWUtM2EwNmQ4MGNiMWY5IiwiY2xpZW50U2VjcmV0IjoiQXdodkRwV3dXV3FlbGJTaSIsIm93bmVyTmFtZSI6IkZhcmhhbiIsIm93bmVyRW1haWwiOiJmYXJoYW4ua2hhbjNAcy5hbWl0eS5lZHUiLCJyb2xsTm8iOiJBMjMwNTIyMTUzNyJ9.SyvyPkMWvfcAOgsXDC9dMZ3EGjw-RCpHsQq5unk2u6o';
+const ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzIyMjQ3MDQyLCJpYXQiOjE3MjIyNDY3NDIsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImU4OTdmZjhmLTE3OGUtNGE1Ny05NDFlLTNhMDZkODBjYjFmOSIsInN1YiI6ImZhcmhhbi5raGFuM0BzLmFtaXR5LmVkdSJ9LCJjb21wYW55TmFtZSI6IkFmZm9yZE1lZCIsImNsaWVudElEIjoiZTg5N2ZmOGYtMTc4ZS00YTU3LTk0MWUtM2EwNmQ4MGNiMWY5IiwiY2xpZW50U2VjcmV0IjoiQXdodkRwV3dXV3FlbGJTaSIsIm93bmVyTmFtZSI6IkZhcmhhbiIsIm93bmVyRW1haWwiOiJmYXJoYW4ua2hhbjNAcy5hbWl0eS5lZHUiLCJyb2xsTm8iOiJBMjMwNTIyMTUzNyJ9.vYbT1yCQjOona2Q88xIaG3yTduikUBipNNx65WMwjnU';
 
 export const fetchNumbers = async (id: string) => {
     try {
         const response = await axios.get(`${API_URL}/${id}`, {
+            method: "GET",
             headers: {
+                "content-type": "application/json",
                 Authorization: `Bearer ${ACCESS_TOKEN}`
             }
         });

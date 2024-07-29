@@ -15,7 +15,8 @@ const ProductDetails: React.FC = () => {
   const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
-    fetch(`http://20.244.56.144/test/companies/AMZ/categories/Laptop/products?top=10&minPrice=1&maxPrice=10000/${id}`)  // Replace with your API endpoint
+    
+    fetch(`http://20.244.56.144/test/companies/AMZ/categories/Laptop/products?top=10&minPrice=1&maxPrice=10000`)
       .then(response => response.json())
       .then(data => setProduct(data));
   }, [id]);
