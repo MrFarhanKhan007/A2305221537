@@ -39,7 +39,7 @@ import React, { useState } from 'react';
 import { fetchNumbers } from './apiService';
 
 const AverageCalculator: React.FC = () => {
-    const [id, setId] = useState('');
+    const [id, setId] = useState("");
     const [data, setData] = useState<any>(null);
     const [error, setError] = useState('');
 
