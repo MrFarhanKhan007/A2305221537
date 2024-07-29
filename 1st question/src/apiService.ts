@@ -36,7 +36,6 @@ export const fetchNumbers = async (id: string) => {
                 "content-type": "application/json",
                 Authorization: "Bearer " +
                     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzIyMjQ4MzM0LCJpYXQiOjE3MjIyNDgwMzQsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImU4OTdmZjhmLTE3OGUtNGE1Ny05NDFlLTNhMDZkODBjYjFmOSIsInN1YiI6ImZhcmhhbi5raGFuM0BzLmFtaXR5LmVkdSJ9LCJjb21wYW55TmFtZSI6IkFmZm9yZE1lZCIsImNsaWVudElEIjoiZTg5N2ZmOGYtMTc4ZS00YTU3LTk0MWUtM2EwNmQ4MGNiMWY5IiwiY2xpZW50U2VjcmV0IjoiQXdodkRwV3dXV3FlbGJTaSIsIm93bmVyTmFtZSI6IkZhcmhhbiIsIm93bmVyRW1haWwiOiJmYXJoYW4ua2hhbjNAcy5hbWl0eS5lZHUiLCJyb2xsTm8iOiJBMjMwNTIyMTUzNyJ9.wG_BMy4C6xbJD0d0-xcGPH6miHL9EsHmCV-QWRDWr2g",
-
             }
         });
         return response.data;
